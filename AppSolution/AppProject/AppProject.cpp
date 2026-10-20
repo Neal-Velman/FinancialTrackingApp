@@ -2,10 +2,15 @@
 //
 
 #include <iostream>
+#include "windows.h"
 
 int main()
 {
+    HANDLE cConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     std::cout << "Hello World!\n";
+
+    SetConsoleTextAttribute(cConsole, 12);
+    std::cout << "test color";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
